@@ -16,6 +16,7 @@
   flex-grow: 1;
   padding: 2px 3px;
   margin: 0;
+  font-weight: bold;
 }
 
 .name{
