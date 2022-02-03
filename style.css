@@ -39,6 +39,10 @@ aside .tree-view {
   overflow-y: scroll;
 }
 
+body{
+  background-color: #008080  ;
+}
+
 main {
   width: 65rem;
   margin-left: 240px;
