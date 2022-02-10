@@ -1,3 +1,5 @@
+
+
  h3 strong {
      display: block;
      font-size: 75%;
@@ -12,7 +14,7 @@
 
 .status-bar-field {
   box-shadow: inset -1px -1px  #dfdfdf, 
-    inset 1px 1px #808080;
+  inset 1px 1px #808080;
   flex-grow: 1;
   padding: 2px 3px;
   margin: 0;
@@ -23,24 +25,140 @@
     margin: 0px;
 }
 
-aside {
-  width: 200px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  padding: 8px;
-  display: flex;
-  align-items: stretch;
-}
 
 aside .tree-view {
-  width: 100%;
-  /* TODO: Move scrollbar into the recessed region? */
   overflow-y: scroll;
 }
 
-main {
-  width: 65rem;
-  margin-left: 240px;
-  margin-bottom: 60px;
+.contenedor{
+  display:grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: repeat(6,auto);
+  grid-template-areas: "aside contenido contenido contenido contenido contenido "
+                       "aside contenido contenido contenido contenido contenido"
+                       "aside contenido contenido contenido contenido contenido "
+                       "aside contenido contenido contenido contenido contenido "
+                       "aside contenido contenido contenido contenido contenido "
+                       "aside contenido contenido contenido contenido contenido "
 }
+
+.contenedorAside{
+  grid-area: aside;
+  height: 70px;
+  margin: 5px;
+}
+
+.contenedorMain{
+  grid-area: contenido;
+  margin: 5px;
+}
+
+
+#mensajeDeBienvenida{
+  text-align: center;
+}
+
+.contenedorBienvenida{
+  display: flex;
+  justify-content: space-between;
+}
+
+#contenedorBoton {
+  display: flex;
+  justify-items: center;
+  align-items: end;
+}
+#mensajeDeBienvenida{
+  margin: 5px;
+  width: 100%;
+}
+
+#experienciaLaboral{
+    margin-top: 12px;
+    text-align: center;
+}
+
+.contenedorExperiencia {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-content: space-between;
+}
+
+audio{
+  display: none;
+}
+.educacion {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.contenedorBoton1{
+    display: flex;
+    justify-content: end;
+}
+  
+.contenedorTituloEducacion{
+  margin-top: 12px;
+  text-align: center;
+}
+
+.contenedorTituloProyectos{
+  margin-top: 12px;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  aside .tree-view{
+    display: none;
+
+  }
+  .contenedorAside{
+    display: none;
+  }
+  .contenedor{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(6,auto);
+    grid-template-areas: "contenido"
+                         "contenido"
+                         "contenido"
+                         "contenido"
+                         "contenido"
+                         "contenido"
+  }
+  
+  .contenedorMain{
+    grid-area: contenido;
+    margin: 5px;
+  }
+  
+
+}
+
+.title-bar-controls {
+  display: flex;
+}
+
+.title-bar-controls button {
+  padding: 0;
+  display: block;
+  min-width: 16px;
+  min-height: 14px;
+}
+
+.title-bar-controls button:active {
+  padding: 0;
+}
+
+.title-bar-controls button:focus {
+  outline: none;
+}
+
+/* .title-bar-controls button[aria-label="Close"]{
+  /* margin-left: 2px;
+  background-image: url("./img/close.png");
+  background-repeat: no-repeat;
+  background-position: top 3px left 4px;
+} */ 
